@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Seller</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ccc;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #111;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Social Seller</h1>
+    <p>Sell smarter. Grow faster.</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>📦 Add Product</h2>
+      <p>Add your products and display them to customers.</p>
+      <button class="btn" onclick="addProduct()">Add Product</button>
+    </div>
+
+    <div class="card">
+      <h2>🛍️ My Products</h2>
+      <p id="products">No products added yet.</p>
+    </div>
+
+    <div class="card">
+      <h2>📊 Sales</h2>
+      <p>Track your sales and grow your business.</p>
+      <button class="btn" onclick="showSales()">View Sales</button>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Social Seller
+  </footer>
+
+  <script>
+    function addProduct() {
+      const name = prompt("Enter product name:");
+
+      if (name) {
+        document.getElementById("products").innerHTML =
+          "✅ " + name + " added successfully!";
+      }
+    }
+
+    function showSales() {
+      alert("Your sales dashboard will appear here.");
+    }
+  </script>
+
+</body>
+</html>
